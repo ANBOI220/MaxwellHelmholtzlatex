@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+
+\title{MaxwellHelmholtz}
+\author{Antoine Boissinot}
+\date{March 2019}
+
+\begin{document}
+
+Prouver que l'équation d'onde de Maxwell
+    $$\nabla^{2}\textbf{E}+  \mu_{0} \varepsilon \frac{\partial^2\textbf{E}}{\partial t^2}  =0$$
+Peut s'écrire comme ceci     
+    $$\nabla^{2}\textbf{A}+ k^{2}\textbf{A}=0$$
+En utilisant la méthode de séparation de variables
+     $$\textbf{E}=\textbf{A}(\textbf{r})\textbf{T}(\textbf{t})$$
+    $$\nabla^{2}\textbf{A T}+  \mu_{0} \varepsilon \frac{\partial^2\textbf{A T}}{\partial t^2}  =0$$
+    $$\frac{1}{\mu_{0} \varepsilon}  \frac{\nabla^{2}\textbf{A}}{\textbf{A}}  =- \frac{T''}{T} $$
+\\
+\\
+Comme $$\textbf{r}=(x,y,z)$$
+$$\nabla^{2}\textbf{\textbf{A}(\textbf{r})} = \frac{\partial^2\textbf{A}}{\partial r^2} = \textbf{A}''$$
+
+On pose
+
+    $$\frac{1}{\mu_{0} \varepsilon}  \frac{A''}{A}  =- \frac{T''}{T}=- \omega^2 $$
+
+Comme 
+$$k \equiv  \frac{ \omega n}{c} $$
+$$c= \frac{1}{ \sqrt{\mu_{0} \varepsilon_{0}} } $$
+$$n \equiv  \sqrt{ \frac{ \varepsilon }{\varepsilon_{0}} }  \equiv  \sqrt{\varepsilon_{r}} $$
+il est possible de définir $k^2$ comme étant : 
+$$k^2=\omega^2  \mu_{0} \varepsilon $$
+Donc en prenant la partie spatiale de l'équation :
+$$\frac{1}{\mu_{0} \varepsilon}  \frac{A''}{A} =- \omega^2 $$
+$$\textbf{A''}+\omega^2\mu_{0} \varepsilon \textbf{A}=0$$
+$$\textbf{A''}+k^2\textbf{A}=0 $$
+$$\therefore \nabla^{2}\textbf{A}+ k^{2}\textbf{A}=0$$
+\end{document}
